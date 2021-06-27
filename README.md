@@ -6,6 +6,7 @@
 - React + Redux +Thunk 
 - TypeScript 
 - Графики: https://www.chartjs.org/
+- API REST Countries https://restcountries.eu/
 
 
 ## Ссылка на heroku
