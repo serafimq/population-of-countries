@@ -4,9 +4,7 @@ import PopulationList from './components/PopulationList'
 const App = () => {
   return (
     <div>
-      
       <PopulationList />
-      
     </div>
   )
 }

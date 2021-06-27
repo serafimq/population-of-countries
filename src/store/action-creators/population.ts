@@ -2,8 +2,6 @@ import axios from "axios"
 import { Dispatch } from "redux"
 import { PopulationAction, PopulationActionTypes } from "../../types/population"
 
-
-
 export const fetchPopulation = (region = 'asia') => {
   return async (dispatch: Dispatch<PopulationAction>) => {
     try {
@@ -13,7 +11,11 @@ export const fetchPopulation = (region = 'asia') => {
         dispatch({type: PopulationActionTypes.FETCH_POPULATION_SUCCESS, payload: response.data})
       },300);
     } catch (error) {
-      dispatch({type:PopulationActionTypes.FETCH_POPULATION_ERROR , payload: 'Произошла ошибка при загрузке данных об этом регионе'})
+      dispatch(
+        {
+          type:PopulationActionTypes.FETCH_POPULATION_ERROR , 
+          payload:  'Произошла ошибка при загрузке данных об этом регионе'
+        })
     }
   }
 }

@@ -5,6 +5,7 @@ import { useTypedSelector } from '../hooks/useTypedSelector'
 import { Bar } from 'react-chartjs-2';
 import 'antd/dist/antd.css'
 import { Button } from 'antd';
+import style from './PopulationList.module.css'
 
 const PopulationList: React.FC = () => {
 
@@ -63,7 +64,11 @@ const PopulationList: React.FC = () => {
 
 
   if (loading) {
-    return <h1>Идет загрузка...</h1>
+    return (
+      <div>
+        <div className={style.lds_roller}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+    )
   }
   if (error) {
     return <h1>{error}</h1>
