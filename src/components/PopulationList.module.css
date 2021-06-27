@@ -1,3 +1,8 @@
+.container_roller { 
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
 .lds_roller {
   display: inline-block;
   position: relative;
@@ -5,7 +10,7 @@
   height: 80px;
 }
 .lds_roller div {
-  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  animation: lds_roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-origin: 40px 40px;
 }
 .lds_roller div:after {
@@ -15,7 +20,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #dfc;
+  background: purple;
   margin: -4px 0 0 -4px;
 }
 .lds_roller div:nth-child(1) {

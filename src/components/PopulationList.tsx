@@ -65,7 +65,7 @@ const PopulationList: React.FC = () => {
 
   if (loading) {
     return (
-      <div>
+      <div className={style.container_roller}>
         <div className={style.lds_roller}><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       </div>
     )
